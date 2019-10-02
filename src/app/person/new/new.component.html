@@ -1,0 +1,13 @@
+<form #form="ngForm" (ngSubmit)="submit(form.value)">
+  <div class="form-row align-items-center justify-content-center">
+    <div class="col-auto">
+      <input type="text" class="form-control" ngModel name="firstName" placeholder="First name" required>
+    </div>
+    <div class="col-auto">
+      <input type="text" class="form-control" ngModel name="lastName" placeholder="Last name" required>
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mt-2" [disabled]="form.invalid">Add</button>
+    </div>
+  </div>
+</form>

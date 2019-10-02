@@ -1,0 +1,24 @@
+<div class="form-row align-items-center justify-content-end">
+  <div class="col-auto">
+    <label for="serach">Search: </label>
+  </div>
+  <div class="col-auto">
+    <input type="text" class="form-control" name="search" [(ngModel)]="search" placeholder="Search" required>
+  </div>
+</div>
+<table class="table table-bordered mt-4">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of personList | filterBy:search">
+      <td>{{ person.id }}</td>
+      <td>{{ person.firstName }}</td>
+      <td>{{ person.lastName }}</td>
+    </tr>
+  </tbody>
+</table>
